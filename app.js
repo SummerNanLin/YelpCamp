@@ -16,7 +16,11 @@ const commentRoutes    = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes      = require("./routes/index");
 
-const url = process.env.DATABASEURL || "mongodb://localhost:27017/campsites";
+// const url = process.env.DATABASEURL || "mongodb://localhost:27017/campsites";
+
+const url = "mongodb+srv://Nan:Ln241823@cluster0.9vk9l.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
+
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{console.log("connected to DB!");}).catch(err =>{console.log('ERROR', err.message);});
 // mongoose.connect("mongodb://localhost:27017/campsites", {useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended: true}));
