@@ -18,7 +18,7 @@ const commentRoutes    = require("./routes/comments"),
 
 // const url = process.env.DATABASEURL || "mongodb://localhost:27017/campsites";
 
-const url = "sdfadfmongodb+srv://Nan:Ln241823@cluster0.9vk9l.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url = "mongodb+srv://Nan:Ln241823@cluster0.9vk9l.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 // test
 
