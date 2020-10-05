@@ -11,18 +11,17 @@ const express        = require("express"),
     User             = require("./models/user"),
     seedDB = require("./seeds");
 
-//requring routes
+//requiring routes
 const commentRoutes    = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes      = require("./routes/index");
 
-const url = "mongodb://localhost:27017/campsites";
+// const url = "mongodb://localhost:27017/campsites";
 
 // const url = process.env.DATABASEURL || "mongodb://localhost:27017/campsites";
 
-//const url = "mongodb+srv://Nan:Ln241823@cluster0.9vk9l.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const url = "mongodb+srv://Nan:hw123456@cluster0.9vk9l.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
-// test
 
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{console.log("connected to DB!");}).catch(err =>{console.log('ERROR', err.message);});
 // mongoose.connect("mongodb://localhost:27017/campsites", {useNewUrlParser: true, useUnifiedTopology: true});
@@ -63,6 +62,3 @@ var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log("Server Has Started!");
 });
-// app.listen(3000, function(){
-//    console.log("The YelpCamp Server Has Started!");
-// });
